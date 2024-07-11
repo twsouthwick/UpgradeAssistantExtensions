@@ -2,7 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Using Alias="UAMetadata" Include="Microsoft.UpgradeAssistant.Metadata" Static="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Polyfill" Version="5.6.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="Microsoft.UpgradeAssistant">
