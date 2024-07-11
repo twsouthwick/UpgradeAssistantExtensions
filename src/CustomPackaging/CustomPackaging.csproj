@@ -1,15 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <LangVersion>latest</LangVersion>
+    <TargetFrameworks>net472;net8.0</TargetFrameworks>
+    <LangVersion>12</LangVersion>
+    <NoWarn>$(NoWarn);CS1998</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <Using Alias="UAMetadata" Include="Microsoft.UpgradeAssistant.Metadata" Static="true" />
+    <Using Alias="UAMetadata" Include="Microsoft.UpgradeAssistant.Metadata" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Build" Version="17.10.4" />
     <PackageReference Include="Polyfill" Version="5.6.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -21,6 +23,9 @@
   <ItemGroup>
     <Reference Include="Microsoft.UpgradeAssistant">
       <HintPath>..\..\lib\Microsoft.UpgradeAssistant.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.UpgradeAssistant.Msbuild">
+      <HintPath>..\..\lib\Microsoft.UpgradeAssistant.Msbuild.dll</HintPath>
     </Reference>
   </ItemGroup>
 

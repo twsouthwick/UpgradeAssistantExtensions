@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace CustomPackaging.Nodes
 {
+    /// <summary>
+    /// Given a project node, identifies the dependencies in the project
+    /// </summary>
     [SliceNodeProvider(
         nodeKind: UAMetadata.SliceNodeKinds.Project,
         traits: Metadata.Traits.CustomPackagingConversion)]
@@ -24,13 +27,6 @@ namespace CustomPackaging.Nodes
             //return [new CustomPackageSliceNode("name", "path")];
 
             return [];
-        }
-    }
-
-    internal sealed class CustomPackageSliceNode : SliceNode
-    {
-        public CustomPackageSliceNode(string name, string path) : base(Metadata.SliceNodeKinds.CustomPackaging, name, path, SliceNodeFlags.None)
-        {
         }
     }
 }

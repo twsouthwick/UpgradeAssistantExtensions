@@ -4,8 +4,11 @@ using System.Collections.Generic;
 
 namespace CustomPackaging.Nodes
 {
+    /// <summary>
+    /// Specifies the order of the slice nodes
+    /// </summary>
     [SliceNodeBuilder(
-        nodeKind: Metadata.SliceNodeKinds.CustomPackaging,
+        nodeKind: Metadata.SliceNodeKinds.CustomPackagingEntry,
         order: Metadata.SliceNodeOrder.CustomPackaging)]
     internal sealed class CustomPackageSliceNodeBuilder : ISliceNodeBuilder
     {

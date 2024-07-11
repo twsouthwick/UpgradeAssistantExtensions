@@ -7,10 +7,11 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-using UAMetadata = Microsoft.UpgradeAssistant.Metadata;
-
-namespace UpgradeAssistantExtensions
+namespace CustomPackaging
 {
+    /// <summary>
+    /// Specifies an operation that Upgrade Assistant can invoke
+    /// </summary>
     [OperationController(
         nameof(CustomPackagingOperation),
         UAMetadata.ControllerCategories.UpgradeFeature,

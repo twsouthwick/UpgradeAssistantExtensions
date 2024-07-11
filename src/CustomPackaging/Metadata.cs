@@ -10,7 +10,7 @@
 
         public static class SliceNodeKinds
         {
-            public const string CustomPackaging = nameof(CustomPackaging);
+            public const string CustomPackagingEntry = nameof(CustomPackagingEntry);
         }
 
         public static class SliceNodeOrder

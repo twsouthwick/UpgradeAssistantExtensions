@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace CustomPackaging.Transformers
 {
+    /// <summary>
+    /// A transformer/validator that will be used to handle the cleanup of the custom package format from the project
+    /// </summary>
     [SliceNodeValidator(
         id: nameof(CustomPackagingRemovalTransformer),
         nodeKind: UAMetadata.SliceNodeKinds.ProjectDependenciesFinalizer,
